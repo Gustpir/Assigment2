@@ -1,0 +1,594 @@
+{
+	"info": {
+		"_postman_id": "33efbd7a-bcd0-481e-97f6-fe917f1a25c6",
+		"name": "COV_V1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "market",
+			"item": [
+				{
+					"name": "create market",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\":\"619b812197c0801eee23ca35\",\n\t\"marketName\" : \"market 2\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/markets/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"markets",
+								"create"
+							]
+						},
+						"description": "create market by userId"
+					},
+					"response": []
+				},
+				{
+					"name": "market list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8082/markets/list?userId=619b812197c0801eee23ca35",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"markets",
+								"list"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "619b812197c0801eee23ca35"
+								}
+							]
+						},
+						"description": "market list by userId"
+					},
+					"response": []
+				},
+				{
+					"name": "update market name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"marketId\": \"619b8ee467a831328e4b5394\",\n\t\"userId\": \"619b812197c0801eee23ca35\",\n\t\"marketName\": \"market 3\"\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/markets/updatename",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"markets",
+								"updatename"
+							]
+						},
+						"description": "update market name"
+					},
+					"response": []
+				},
+				{
+					"name": "destroy market",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"farmId\": \"619bbc81ecc2de4bd403975f\",\n\t\"userId\": \"619b812197c0801eee23ca35\"\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/farms/destroy",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"farms",
+								"destroy"
+							]
+						},
+						"description": "destroy market by marketid"
+					},
+					"response": []
+				},
+				{
+					"name": "collect resource",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"marketId\": \"619b9204c3709434f1633952\",\n\t\"userId\": \"619b812197c0801eee23ca35\"\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/markets/collect",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"markets",
+								"collect"
+							]
+						},
+						"description": "collect resource market by id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "farm",
+			"item": [
+				{
+					"name": "create farm",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\":\"619b812197c0801eee23ca35\",\n\t\"farmName\" : \"farm 3\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/farms/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"farms",
+								"create"
+							]
+						},
+						"description": "create market by userId"
+					},
+					"response": []
+				},
+				{
+					"name": "farm list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8082/farms/list?userId=619b812197c0801eee23ca35",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"farms",
+								"list"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "619b812197c0801eee23ca35"
+								}
+							]
+						},
+						"description": "market list by userId"
+					},
+					"response": []
+				},
+				{
+					"name": "update farm name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"farmId\": \"619bbb53ecc2de4bd403975d\",\n\t\"userId\": \"619b812197c0801eee23ca35\",\n\t\"farmName\": \"market 2\"\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/farms/updatename",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"farms",
+								"updatename"
+							]
+						},
+						"description": "update market name"
+					},
+					"response": []
+				},
+				{
+					"name": "collect resource",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"farmId\": \"619bbb53ecc2de4bd403975d\",\n\t\"userId\": \"619b812197c0801eee23ca35\"\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/farms/collect",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"farms",
+								"collect"
+							]
+						},
+						"description": "collect resource market by id"
+					},
+					"response": []
+				},
+				{
+					"name": "destroy farm",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"marketId\": \"619b8ee467a831328e4b5394\",\n\t\"userId\": \"619b812197c0801eee23ca35\"\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/markets/destroy",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"markets",
+								"destroy"
+							]
+						},
+						"description": "destroy market by marketid"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "barrack",
+			"item": [
+				{
+					"name": "create barrack",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\":\"619b812197c0801eee23ca35\",\n\t\"barrackName\" : \"barrack 4\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/barracks/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"barracks",
+								"create"
+							]
+						},
+						"description": "create market by userId"
+					},
+					"response": []
+				},
+				{
+					"name": "barrack list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8082/barracks/list?userId=619b812197c0801eee23ca35",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"barracks",
+								"list"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "619b812197c0801eee23ca35"
+								}
+							]
+						},
+						"description": "market list by userId"
+					},
+					"response": []
+				},
+				{
+					"name": "update barrack name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"barrackId\": \"619bc05bae0b554fa6dd1a2a\",\n\t\"userId\": \"619b812197c0801eee23ca35\",\n\t\"barrackName\": \"barrack 2\"\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/barracks/updatename",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"barracks",
+								"updatename"
+							]
+						},
+						"description": "update market name"
+					},
+					"response": []
+				},
+				{
+					"name": "collect resource",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"barrackId\": \"619bc05bae0b554fa6dd1a2a\",\n\t\"userId\": \"619b812197c0801eee23ca35\"\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/barracks/collect",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"barracks",
+								"collect"
+							]
+						},
+						"description": "collect resource market by id"
+					},
+					"response": []
+				},
+				{
+					"name": "destroy barrack",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"barrackId\": \"619bc1dcae0b554fa6dd1a2c\",\n\t\"userId\": \"619b812197c0801eee23ca35\"\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/barracks/destroy",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"barracks",
+								"destroy"
+							]
+						},
+						"description": "destroy market by marketid"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"emailAddress\":\"test1@gmail.com\",\n\t\"name\" : \"Tian 1\",\n\t\"password\" : \"aaaaaa\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8082/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"users",
+						"register"
+					]
+				},
+				"description": "create new user and create townhall automatically"
+			},
+			"response": []
+		},
+		{
+			"name": "user list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8082/users/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"users",
+						"list"
+					]
+				},
+				"description": "user list"
+			},
+			"response": []
+		},
+		{
+			"name": "townhall list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8082/users/townhall",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"users",
+						"townhall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "townhall detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8082/users/mytownhall?userId=619b812197c0801eee23ca35",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"users",
+						"mytownhall"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "619b812197c0801eee23ca35"
+						}
+					]
+				},
+				"description": "townhall by userId"
+			},
+			"response": []
+		}
+	]
+}
